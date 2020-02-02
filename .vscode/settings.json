@@ -6,5 +6,5 @@
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.pytestEnabled": true,
-    "python.pythonPath": "/home/pouria/anaconda3/bin/python"
+    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe"
 }

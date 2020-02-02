@@ -1,1 +1,3 @@
-[]
+[
+  "src/test.py::test_reading_images"
+]
