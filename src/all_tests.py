@@ -1,6 +1,9 @@
+import glob
 import pytest
 import sys
-import glob
+import os
+
+sys.path.append("./gadget")
 
 from gadget.files import Images
 from gadget.processing import Preprocessing
