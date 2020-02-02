@@ -10,6 +10,26 @@ from gadget.processing import Preprocessing
 from gadget.validation import Check
 
 
+def test_attributes():
+    print("", end="\n")  # a new line
+
+    print("test the existence of gadget module and its attributes")
+    if hasattr(Images, 'imread'):
+        pass
+    else:
+        pytest.fail("there is not attribute %s" % "imread()")
+
+    if hasattr(Preprocessing, 'run'):
+        pass
+    else:
+        pytest.fail("there is not attribute %s" % "run()")
+
+    if hasattr(Check, 'run'):
+        pass
+    else:
+        pytest.fail("there is not attribute %s" % "run()")
+
+
 def test_reading_images():
     path_accepted_android = '../img/acceptable/android/*.jpg'
     path_accepted_ios = '../img/acceptable/ios/*.jpg'
@@ -87,7 +107,7 @@ def test_pre_processing_3():
                (width < height), "the shape of " + im + " can not be changed"
 
 
-def test_template_matching_1():
+def test_template_matching_accepted_android():
     path_accepted_android = '../img/acceptable/android/*.jpg'
 
     print("", end="\n")  # a new line
@@ -102,7 +122,7 @@ def test_template_matching_1():
         assert status is True, "the validation check of " + im + " was not established"
 
 
-def test_template_matching_2():
+def test_template_matching_accepted_ios():
     path_accepted_android = '../img/acceptable/ios/*.jpg'
 
     print("", end="\n")  # a new line
@@ -117,7 +137,7 @@ def test_template_matching_2():
         assert status is True, "the validation check of " + im + " was not established"
 
 
-def test_template_matching_3():
+def test_template_matching_non_acceptable():
     path_accepted_android = '../img/non-acceptable/*.jpg'
 
     print("", end="\n")  # a new line
