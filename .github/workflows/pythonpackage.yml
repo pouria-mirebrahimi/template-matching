@@ -30,4 +30,4 @@ jobs:
       - name: Test with pytest
         run: |
           pip install pytest
-          pytest ./src/*_test.py
+          pytest ./src/all_tests.py
