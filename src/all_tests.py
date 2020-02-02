@@ -3,7 +3,7 @@ import pytest
 import sys
 import os
 
-sys.path.append("./gadget")
+sys.path.append("./gadget/")
 
 from gadget.files import Images
 from gadget.processing import Preprocessing
