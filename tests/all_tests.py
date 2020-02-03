@@ -2,7 +2,7 @@ import glob
 import pytest
 import sys
 
-sys.path.append("../src/gadget/")
+sys.path.append("../src/")
 
 from gadget.files import Images
 from gadget.processing import Preprocessing
