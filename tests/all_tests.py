@@ -1,8 +1,9 @@
 import glob
 import pytest
-import sys
+import sys, os.path
 
-sys.path.append("../src/")
+source_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..')) + '/src/')
+sys.path.append(source_dir)
 
 from gadget.files import Images
 from gadget.processing import Preprocessing
